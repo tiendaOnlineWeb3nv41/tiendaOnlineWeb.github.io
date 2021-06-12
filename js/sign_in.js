@@ -32,6 +32,10 @@ var loginWithGoogle=function(){
 
 function registraUsuario(){
   var provider = new firebase.auth.GoogleAuthProvider();
+  alert(`Email:<input type="email" id="inputEmail"><br>
+        Password<input type="password" id="password"><br> `);
+
+  
     firebase.auth().createUserWithEmailAndPassword(email, password)
      .then((userCredential) => {
     // Signed in
@@ -44,4 +48,6 @@ function registraUsuario(){
   });
 }
   
+
+
 
