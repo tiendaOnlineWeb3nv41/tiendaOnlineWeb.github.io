@@ -355,3 +355,28 @@ h3 {
     cursor: pointer;
 
 }
+
+.etiquetaInput{
+    font-family: var(--fuentePrincipal);
+    font-size: xx-large;
+    font-style: oblique;
+}
+.inputs{
+    background-color: var(--primarioOscuro);
+    max-width: 50%;
+    text-align: center;
+    margin-left: 30%;
+}
+.registro{
+    margin-left: 60%;
+}
+.input{
+    font-size: xx-large;
+    border: none;
+    border-radius: 2rem;
+    margin-left: 3rem;
+}
+
+
+
+
