@@ -352,5 +352,6 @@ h3 {
     border: none;
     border-radius: 3rem;
     background-color: greenyellow;
+    cursor: pointer;
 
 }
