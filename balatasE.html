@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+    <script src="js/agregar.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -44,7 +45,7 @@
                     </select>
                     <input class="formulario__campo" type="number" placeholder="Cantidad" min="1" id="cantidad">
                     <div class="botones">
-                        <button type="button" class="btn_Agregar" id="btn-balatas " onclick="agregarBalatas()">+</button>
+                        <button type="button" class="btn_Agregar" id="btn-balatas " id="agrega" onclick="agregar()">+</button>
                         <button type="button" class="btn_Quitar" id="btn-balatas " onclick="eliminar()">-</button>
                     </div> 
                 </form>
@@ -69,6 +70,7 @@
             
         </fieldset>
     </div>
-    <script src="js/agregar.js"></script>
+    
+    <script src="js/init.js"></script>
 </body>
 </html>
