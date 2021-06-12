@@ -1,3 +1,4 @@
+var enviar=document.getElementById('enviar');
 var loginWithGoogle=function(){
 
             var provider = new firebase.auth.GoogleAuthProvider();
@@ -13,7 +14,7 @@ var loginWithGoogle=function(){
                 // The signed-in user info.
                 var user = result.user;
                 // ...
-                var enviar=document.getElementById('enviar');
+                
                 enviar.innerHTML=`<a href="inicio_.html">
                                   <button class="btn_inicia" type="button">Continuar</button>
                                   </a>`;
@@ -40,16 +41,18 @@ function registraUsuario(){
      .then((userCredential) => {
     // Signed in
     var user = userCredential.user;
+    enviar.innerHTML=`<a href="inicio_.html">
+    <button class="btn_inicia" type="button">Continuar</button>
+    </a>`;
   })
   .catch((error) => {
     var errorCode = error.code;
     var errorMessage = error.message;
-    console.log(errorCode);
-    console.log(errorMessage);
+    alert(errorMessage);
+    alert(errorCode);
     // ..
   });
 }
   
-
 
 
