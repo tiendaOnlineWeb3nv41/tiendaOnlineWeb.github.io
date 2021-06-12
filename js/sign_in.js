@@ -32,8 +32,8 @@ var loginWithGoogle=function(){
 
 function registraUsuario(){
   var provider = new firebase.auth.GoogleAuthProvider();
-  alert(`Email:<input type="email" id="inputEmail"><br>
-        Password<input type="password" id="password"><br> `);
+  var email=document.getElementById('email').value;
+  var password=document.getElementById('password').value
 
   
     firebase.auth().createUserWithEmailAndPassword(email, password)
