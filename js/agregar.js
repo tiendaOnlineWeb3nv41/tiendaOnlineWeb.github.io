@@ -1,4 +1,12 @@
 const firebase = require("firebase");
+// Initialize Cloud Firestore through Firebase
+firebase.initializeApp({
+    apiKey:  "AIzaSyAiLo3IJ4nJq9xFXuLqbyTKv2wf4TxOZNI",
+    authDomain: "tienda-online-8efef.firebaseapp.com",
+    projectId: "tienda-online-8efef",
+});
+  
+  var db = firebase.firestore();
 // Required for side-effects
 require("firebase/firestore");
 
