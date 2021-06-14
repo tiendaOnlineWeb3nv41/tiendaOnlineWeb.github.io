@@ -179,8 +179,8 @@ var firebaseConfig = {
             break;
           case "Kia":
             identificacion="FrfIHvldYn4hxynlcFay";
-            _cantidad=canK-_cantidad;
             aux=canK;
+            _cantidad=canK-_cantidad;
             break;
           default:
             alert("Seleccione una marca");
