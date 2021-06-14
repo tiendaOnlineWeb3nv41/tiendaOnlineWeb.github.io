@@ -149,7 +149,7 @@ var firebaseConfig = {
       var salidaModelo = document.getElementById('salidaModelo');
       var salidaProducto = document.getElementById('salidaProducto');
       var salidaTotal = document.getElementById('salidaTotal');
-      var identificacion='';
+      var identificacion='',aux2=_cantidad;
         switch(_marca){
           case "Chevrolet":
             identificacion="FNYYWHOZWF1ZZMDaaTHF";
@@ -192,6 +192,7 @@ var firebaseConfig = {
           _cantidad=aux;
         }else{
           alert("Se cargo con exito tu compra");
+            _cantidad=aux2
         }
           await db.collection('balatas').doc(identificacion).set({
             precio:_precio,
@@ -201,9 +202,9 @@ var firebaseConfig = {
           });
       salidaProducto.innerHTML=_producto;
       salidaMarca.innerHTML=_marca;
-      salidaCantidad.innerHTML=aux;
+      salidaCantidad.innerHTML=aux2;
       salidaModelo.innerHTML=_modelo;
-      salidaTotal.innerHTML=(_precio*aux)+".00 $";
+      salidaTotal.innerHTML=(_precio*aux2)+".00 $";
     
   };
  
