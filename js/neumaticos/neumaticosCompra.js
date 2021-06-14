@@ -191,6 +191,7 @@ async function comprar(){
         _cantidad=aux;
       }else{
         alert("Se cargo con exito su compra");
+        _cantidad=aux2;
       }
         await db.collection('Neumaticos').doc(identificacion).set({
           precio:_precio,
@@ -201,8 +202,8 @@ async function comprar(){
 
     salidaProducto.innerHTML=_producto;
     salidaMarca.innerHTML=_marca;
-    salidaCantidad.innerHTML=aux;
+    salidaCantidad.innerHTML=aux2;
     salidaModelo.innerHTML=_modelo;
-    salidaTotal.innerHTML=(_precio*aux)+".00 $";
+    salidaTotal.innerHTML=(_precio*aux2)+".00 $";
   
 };
