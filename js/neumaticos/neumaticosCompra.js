@@ -18,12 +18,12 @@ const db=firebase.firestore();
 
 
 //VARIABLES
-var datosC = db.collection("Neumaticos").doc('FNYYWHOZWF1ZZMDaaTHF');
-var datosV = db.collection("Neumaticos").doc("6oPJRFpeOpuviXJrQaVx");
-var datosF = db.collection("Neumaticos").doc("EGpO59JZJKHQlw3SPkjl");
-var datosK = db.collection("Neumaticos").doc("FrfIHvldYn4hxynlcFay");
-var datosN = db.collection("Neumaticos").doc("S7uiCSbBfnXetInWW60J");
-var datosT = db.collection("Neumaticos").doc("D5a18T51pHvr1gbAODd4");
+var datosC = db.collection("Neumaticos").doc('AsbeBmj7aNCKciBkPWtK');
+var datosV = db.collection("Neumaticos").doc("bt9UrTLC6XSwde0CNipi");
+var datosF = db.collection("Neumaticos").doc("q7yfL4QNkne4lpUN7OV3");
+var datosK = db.collection("Neumaticos").doc("AyI6TJZ6dDNIfJcWl53d");
+var datosN = db.collection("Neumaticos").doc("enFwVGRH9Qsy2GQYoC05");
+var datosT = db.collection("Neumaticos").doc("d6bTKRCHjCeYtWjnPT8n");
 var canC=0,canVw=0,canF=0,canK=0,canN=0,canT=0;
 var precioVw=0,precioF=0,precioC=0,precioK=0,precioN=0,precioT=0;
 
@@ -103,27 +103,27 @@ _marca.addEventListener('change',cambio=>{
   var salidaPrecio = document.getElementById('salidaPrecio');
     switch(newMarca){
       case "Chevrolet":
-        identificacion="FNYYWHOZWF1ZZMDaaTHF";
+        identificacion="AsbeBmj7aNCKciBkPWtK";
         salidaPrecio.innerHTML=precioC;
         break;
       case "VolksWagen":
-        identificacion="6oPJRFpeOpuviXJrQaVx";
+        identificacion="bt9UrTLC6XSwde0CNipi";
         salidaPrecio.innerHTML=precioVw;
         break;
       case "Fiat":
-        identificacion="EGpO59JZJKHQlw3SPkjl";
+        identificacion="q7yfL4QNkne4lpUN7OV3";
         salidaPrecio.innerHTML=precioF;
         break;
       case "Nissan":
-        identificacion="S7uiCSbBfnXetInWW60J";
+        identificacion="enFwVGRH9Qsy2GQYoC05";
         salidaPrecio.innerHTML=precioN;
         break;
       case "Toyota":
-        identificacion="D5a18T51pHvr1gbAODd4";
+        identificacion="d6bTKRCHjCeYtWjnPT8n";
         salidaPrecio.innerHTML=precioT;
         break;
       case "Kia":
-        identificacion="FrfIHvldYn4hxynlcFay";
+        identificacion="AyI6TJZ6dDNIfJcWl53d";
         salidaPrecio.innerHTML=precioK;
         break;
       default:
@@ -152,32 +152,32 @@ async function comprar(){
     var identificacion='', aux=0,aux2=_cantidad;
       switch(_marca){
         case "Chevrolet":
-          identificacion="FNYYWHOZWF1ZZMDaaTHF";
+          identificacion="AsbeBmj7aNCKciBkPWtK";//FNYYWHOZWF1ZZMDaaTHF
           _cantidad=canC-_cantidad;
           aux=canC;
           break;
         case "VolksWagen":
-          identificacion="6oPJRFpeOpuviXJrQaVx";
+          identificacion="bt9UrTLC6XSwde0CNipi";
           _cantidad=canVw-_cantidad;
           aux=canVw;
           break;
         case "Fiat":
-          identificacion="EGpO59JZJKHQlw3SPkjl";
+          identificacion="q7yfL4QNkne4lpUN7OV3";
           _cantidad=canF-_cantidad;
           aux=canF;
           break;
         case "Nissan":
-          identificacion="S7uiCSbBfnXetInWW60J";
+          identificacion="enFwVGRH9Qsy2GQYoC05";
           _cantidad=canN-_cantidad;
           aux=canN;
           break;
         case "Toyota":
-          identificacion="D5a18T51pHvr1gbAODd4";
+          identificacion="d6bTKRCHjCeYtWjnPT8n";
           _cantidad=canT-_cantidad;
           aux=canT;
           break;
         case "Kia":
-          identificacion="FrfIHvldYn4hxynlcFay";
+          identificacion="AyI6TJZ6dDNIfJcWl53d";
           _cantidad=canK-_cantidad;
           aux=canK;
           break;
@@ -206,3 +206,4 @@ async function comprar(){
     salidaTotal.innerHTML=(_precio*aux)+".00 $";
   
 };
+db.collection('Neumaticos').doc("FNYYWHOZWF1ZZMDaaTHF").delete();
