@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontEnd Store</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body >
+ 
+
+    <nav class="navegacion">
+        <a class="navegacion__enlace navegacion__enlace--activo" href="inicio_.html">tienda</a>
+    </nav>
+
+    <main class="contenedor">
+        <output id="nombre" class="nombre"> BALATAS </output> 
+
+        <div class="camisa">
+            <img class="camisa__imagen" src="img/balatas.jpg" alt="Imagen del Producto">
+            <div class="camisa__contenido">
+                <label class="nombre">Precio: <output id="salidaPrecio">350</output><label>$</label></label>
+
+                <form class="formulario">
+                    <select class="formulario__campo" id="modelo">
+                        <option disabled selected >-- Seleccionar Modelo --</option>
+                        <option>2020</option>
+                        <option>2019</option>
+                        <option>2018</option>
+                        <option>2017</option>
+                        <option>2016</option>
+                        <option>2015</option>
+                        <h1>hola</h1>
+                    </select>
+                    <select class="formulario__campo" id="marca">
+                        <option disabled selected>-- Seleccionar Marca --</option>
+                        <option>Chevrolet</option>
+                        <option>VolksWagen</option>
+                        <option>Kia</option>
+                        <option>Fiat</option>
+                        <option>Nissan</option>
+                        <option>Toyota</option>
+                    </select>
+                    <input class="formulario__campo" type="number" placeholder="Cantidad" min="1" id="cantidad">
+                    <button type="button" class="btn" id="btn-balatas " onclick="comprar()">comprar</button>
+                </form>
+                <div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="divTicket"> 
+        <fieldset class="ticket">
+            <div class="Tticket"><label>Tu compra es:</label><br></div>
+            <label class="etiqueta" >Productos:<output id="salidaProducto"></output></label><br>
+            <label class="etiqueta" >cantidad:<output id="salidaCantidad"></output></label><br>
+            <label class="etiqueta" >Marca:<output id="salidaMarca"></output></label><br>
+            <label class="etiqueta" >Modelo:<output id="salidaModelo"></outpu ></label><br>
+                <label class="etiqueta" >Total:<output id="salidaTotal"></outpu ></label><br> 
+        </fieldset>
+    </div>
+    <footer class="footer">
+        <p class="footer__texto">SANCHEZ ROMERO JOSE MANUEL</p>
+    </footer>
+    <script src="js/balatasCompra.js"></script>
+</body>
+</html>

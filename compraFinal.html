@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontEnd Store</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html">
+            <h1>PROYECTO PROGRAMACION WEB</h1>
+        </a>
+    </header>
+    <div class="nombre">
+        <h6>Sánchez Romero José Manuel</h6>
+    </div>
+    <div  class="carrito">
+        <a href="compraFinal.html">
+            <img class="carrito_logo" src="img/carrito.jpg" alt="carrito">
+        </a>
+    </div>
+    <nav class="navegacion">
+        <a class="navegacion__enlace navegacion__enlace--activo" href="inicio_.html">Tienda</a>
+        <a class="navegacion__enlace navegacion__enlace--activo" href="existencias.html">Productos</a>
+    </nav>
+    
+    <main class="contenedor">
+        <h1>Tus productos son:</h1>
+        <div id="carrito">
+        <div class="carrito_Final">
+            <fieldset class="ticket">
+                <legend class="nombre">Tu carrito es:</legend>
+            <div class="grid">
+                <div class="items">
+                    <output class="ticket_carrito" id="salidapBalatas"></output><label>:</label><br>
+                    <output class="ticket_carrito" id="salidapKits"></output><label>:</label><br>
+                    <output class="ticket_carrito" id="salidapNeumaticos"></output><label>:</label><br>
+                    <output class="ticket_carrito" id="salidapFaros"></output><label>:</label><br>
+                    <output class="ticket_carrito" id="salidapFacias"></output><label>:</label><br>
+                    <output class="ticket_carrito" id="salidapEmbragues"></output><label>:</label><br>
+                </div>
+                <div class="items_cantidad">
+                <output class="ticket_carrito" id="salidacBalatas"></output><label>unidades</label><br>
+                <output class="ticket_carrito" id="salidacKits"></output><label>unidades</label><br>
+                <output class="ticket_carrito" id="salidacNeumaticos"></output><label>unidades</label><br>
+                <output class="ticket_carrito" id="salidacFaros"></output><label>unidades</label><br>
+                <output class="ticket_carrito" id="salidacFacias"></output><label>unidades</label><br>
+                <output class="ticket_carrito" id="salidacEmbragues"></output><label>unidades</label><br>
+                </div>
+            </div>
+                <h1>------------------------------------------------------------------------------------------------</h1>
+                <label class="nombre">Total:&nbsp;&nbsp;&nbsp;&nbsp;</label><output class="ticket_carrito" id="salidaTotal"></output>
+            </fieldset>
+        </div>
+        </div>  <!--.producto-->
+        <div class="div_termina">
+            <button id="btn_termina-compra" class="btn">finalizar</button>
+            <p>Pulsa el boton finalizar para terminar la compra</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__texto">SANCHEZ ROMERO JOSE MANUEL</p>
+    </footer>
+    <script src="js/carrito.js"></script>
+</body>
+</html>
